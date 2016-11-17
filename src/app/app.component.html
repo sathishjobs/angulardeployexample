@@ -1,3 +1,70 @@
-<h1>
-  {{title}}
-</h1>
+<h1>Ng course tut</h1>
+<dir-ngtut></dir-ngtut>
+
+
+
+<hr>
+  <dir-first>
+    <dir-second>
+      <footer>Bottom</footer>
+            <div class="header1">Top</div>
+
+      This is common
+    </dir-second>
+  </dir-first>
+<hr>
+<h1>Attributes Directives</h1>
+<h2>ngClass / ngStyle</h2>
+<div [ngClass] ="{border:true ,background:true}"></div>
+<div [highlight]="'orange'" [defaultColor]="'pink'">Steve jobs</div>
+<h1>Structural Directives</h1>
+<h2>*ngif</h2>
+<div *ngIf="switch">Conditional Text</div>
+
+<template [ngIf]="switch">
+  <div>
+    Conditional Text
+  </div>
+</template>
+
+<button (click)="onSwitch()">Switch</button>
+
+<h2>*ngFor</h2>
+<ul>
+  <li *ngFor="let item of items; let i = index">{{item}} -{{index}}- (Index:{{i}})</li>
+</ul>
+<hr>
+<h2>ngSwitch</h2>
+<div [ngSwitch] ="value">
+ <p *ngSwitchCase="10">10</p>
+ <p *ngSwitchCase="100">100</p>
+ <p *ngSwitchDefault>Default</p>
+</div>
+<h2>Unless custom Directives</h2>
+<div *dirUnless="switch">Conditional Text</div>
+<hr>
+<dir-s1></dir-s1>
+<hr>
+<dir-s2></dir-s2>
+<hr>
+<h1>Router outlet</h1>
+  <a [routerLink] ="['']" [queryParams]="{analytics:500}" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Home</a>
+  <a [routerLink] ="['/user']" routerLinkActive="active">User</a>
+  <input type="text" #id (input)="0">
+    <a [routerLink] ="['user/',id.value]">User</a>
+    <h2>Param id {{id}}</h2>
+  <button (click)="onNavigate()">Go Home</button>
+  <router-outlet></router-outlet>
+<hr>
+<h1>Template driven</h1>
+<dir-template-driven></dir-template-driven>
+<hr>
+<h1>Data driven Approach</h1>
+<dir-data-driven></dir-data-driven>
+<hr>
+<h1>Pipe demo</h1>
+<dir-pipe></dir-pipe>
+<hr>
+<h1>Http demo</h1>
+<dir-http></dir-http>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>

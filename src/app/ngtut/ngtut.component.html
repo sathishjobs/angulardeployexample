@@ -1,0 +1,6 @@
+<div>
+  parent Num: {{num}}<br/>
+  Parent Count: {{parentCount}}
+  <dir-counter #ref [count]="num" (result)="onChange($event)"></dir-counter>
+  <h1>{{ref.main}}</h1>
+</div>

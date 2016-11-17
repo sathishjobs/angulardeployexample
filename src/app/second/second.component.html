@@ -1,0 +1,11 @@
+<p>
+  second works!
+</p>
+<ng-content select=".header1"></ng-content>
+<ng-content></ng-content>
+<ng-content select="footer"></ng-content>
+<ul>
+  <li *ngFor="let episode of episodes;let i=index;let isOdd=odd;let first=first" [ngClass]="{odd:isOdd,first:first}">
+    {{episode.title}}
+  </li>
+</ul>
