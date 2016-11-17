@@ -1,0 +1,12 @@
+<p>
+  pipe works!
+  {{value| uppercase}}
+  <br>
+  {{date | date:"MM/dd/yy"}}
+  <br>
+  {{value | slice:2}}
+</p>
+
+<h2>Custom Pipe</h2>
+<input type="text" #input (keyup)="0">
+<p>{{input.value | double}}</p>

@@ -1,0 +1,15 @@
+<h1>Service</h1>
+<div>
+  <input type="text" #input>
+  <button (click)="onLog(input.value)">Log</button>
+  <button (click)="onStore(input.value)">Store</button>
+</div>
+<div>
+  <button (click)="onGet()">Refresh Storage</button>
+  <h3>Storage</h3>
+  <ul>
+    <li *ngFor="let item of items">{{item}}</li>
+  </ul>
+  <h3>Recived Value</h3>
+  <p>{{value}}</p>
+</div>
